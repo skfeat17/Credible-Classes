@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body> 
+    <div class="container" id="accordionFlushExample">
+        <!-- JavaScript will populate this section with notices -->
+    </div>
+    
+    <script>
+        async function fetchNotices() {
+            try {
+                const response = await fetch('https://server-as2k.onrender.com/getnotice');
+                const data = await response.json();
+    
+                const accordionContainer = document.getElementById('accordionFlushExample');
+    
+                data.forEach(notice => {
+                    const card = document.createElement('div');
+                    card.classList.add('card', 'shadow', 'mt-3');
+                    card.innerHTML = `
+                        <div class="card-body">
+                            <h5 class="card-title bold text-center">${notice.noticeTitle}</h5>
+                            <p class="card-text">${notice.noticeContent.replace(/\n/g, '<br>')}</p>
+                        </div>
+                    `;
+    
+                    accordionContainer.appendChild(card);
+    
+                    const cardBody = card.querySelector('.card-body');
+                    cardBody.addEventListener('click', () => {
+                        card.classList.toggle('active');
+                    });
+                });
+            } catch (error) {
+                console.error('Error fetching notices:', error);
+            }
+        }
+    
+        fetchNotices();
+    </script>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

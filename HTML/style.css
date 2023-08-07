@@ -1,0 +1,30 @@
+.underline-grow {
+    position: relative;
+}
+h1{
+    display: inline-block;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-inline: 30px;
+    cursor: pointer;
+}
+.underline-grow {
+    position: relative;
+    display: inline;
+}
+
+.underline-grow::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: red;
+    transition: width 0.3s ease-in-out; /* You can adjust the transition duration as needed */
+    margin-bottom: -5px; /* Adjust the value to set the desired space between text and underline */
+}
+
+.underline-grow:hover::before {
+    width: 100%;
+}

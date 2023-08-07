@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hamburger Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav-branding"></div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+        <div class="menu" id="menu">
+            <ul class="menulist">
+                <li onclick="location.href = 'index.html'">Home</li>
+                <li>Products</li>
+                <li>Services</li>
+                <li onclick="location.href = 'About.html'">About us</li>
+            </ul>
+        </div>
+    </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quis accusamus, ullam laudantium rerum ex soluta recusandae iusto asperiores voluptatum aliquam quidem delectus labore officiis sed veniam necessitatibus exercitationem animi dignissimos nemo quod! Tenetur impedit iusto earum maiores omnis? Libero dolor, sit perspiciatis odio dolorem magni quae! Quis nisi architecto dolore qui corrupti ea doloremque ullam!</p>
+    <script>
+  const header = document.querySelector('.header');
+  const menu = document.getElementById('menu');
+  const hamburger = document.querySelector('.hamburger');
+  const navBranding = document.querySelector('.nav-branding');
+  const ul = document.querySelector('ul');
+
+  function toggleMenu() {
+    header.classList.toggle('active');
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    navBranding.classList.toggle('active');
+    ul.classList.toggle('active');
+  }
+
+  const listItems = document.querySelectorAll("li");
+
+  listItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      header.classList.remove("active");
+      menu.classList.remove("active");
+      hamburger.classList.remove("active");
+      navBranding.classList.remove("active");
+      ul.classList.remove("active");
+    });
+  });
+
+    </script>
+</body>
+
+</html>
+

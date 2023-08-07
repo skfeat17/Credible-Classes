@@ -1,0 +1,24 @@
+Pyhsics
+chemistry
+bilogy
+geography
+economics
+civics
+history
+
+
+{
+  "roll":1775,
+  "examtype":"ATS",
+  "examdate":"23/06/23",
+  "fullmarks":500,
+ "marks":350
+}
+
+
+  const roll = req.params.roll;
+    const newResult = {
+      Exam_Type: req.params.examtype,
+      Exam_Date: req.params.examdate,
+      Full_Marks: req.params.fullmarks,
+      Obtained_Marks: req.params.marks,
